@@ -6,8 +6,15 @@
     font: Helvetica;
 }
 
+html{
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
 body{
     background-color: #ffffff;
+    overflow-x: hidden;
+
 }
 
 nav>div>ul{
@@ -49,7 +56,7 @@ width: 50px;
 }
 
 
-header.prologue{
+header.prologue,section.prologue{
     display: flex;
     justify-content: center;
     flex-direction: row;
@@ -68,13 +75,13 @@ header>img{
     width: 50%;
 }
 
-header>div{
+header>div,section.prologue>div{
     width: 50%;
 
 }
 div.intro{
     line-height: 40px;
-
+    color: green;
 }
 
 div.intro>h1{
@@ -82,7 +89,7 @@ div.intro>h1{
 }
 
 div.intro>p{
-color: grey;
+color: #3e8e41;
 font-size: 16px;
 }
 
@@ -116,7 +123,7 @@ div.intro>a>button{
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        box-shadow: 2px 2px 4px darkgrey, -2px -2px 4px darkgrey ;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px ;
         max-width: 500px;
         width: 100%;
         height: 85vh;
@@ -194,6 +201,10 @@ div.intro>a>button{
         width: 100%;
         height: 100%;
         color: green;
+        padding: 10px;
+        background-color: #f7f7f7;
+        border-radius: 50%;
+        box-shadow:rgba(17, 12, 46, 0.15) 0px 48px 100px 0px ;
     }
 
     .footer>ul>li:first-of-type>a{
@@ -201,8 +212,8 @@ div.intro>a>button{
     }
 
     .footer>ul>li>a>svg{
-        width: 100%;
-        height: 60px;
+        width: 40px;
+        height: 40px;
 
     }
 
@@ -213,7 +224,86 @@ div.intro>a>button{
     h4.developer{
         text-align: center;
     }
+    
+    .showcase{
+        background-color: #f1f1fd;
+        min-height: 70vh;
+        padding:20px 0px ;
+        margin-top: 80px;
+    }
 
+    .showcase>h2{
+        text-align: center;
+        font-weight: bold;
+        font-size: 30px;
+    }
+    .text-evidence{
+        display: flex;
+        flex-wrap: nowrap;
+        width: 100%;
+        padding: 30px;
+        overflow-x: scroll;
+        gap:20px ;
+        scrollbar-width:thin;
+        border-bottom: 1px solid lavender;
+    }
+
+
+.testimonials{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+    li.evidence{
+        min-width: 300px;
+        width: 500px;
+        box-shadow: 2px 2px 4px darkgrey, -2px -2px 4px darkgrey;
+        padding: 10px;
+        border-radius: 4px;
+        color: #6666a7;
+        background-color: #ffffff;
+    }
+
+    li.evidence>div.quote>svg{
+        width: 50px;
+        height: 50px;
+    }
+
+    li.evidence>h4{
+        font-size: 16px;
+        line-height: 30px;
+        font-weight: lighter;
+    }
+
+
+
+    li.evidence>h3{
+        font-weight: bolder;
+    }
+
+    ul.text-evidence>img{
+        object-fit:fill;
+        border-radius: 6px;
+        border: 1px solid lightblue;
+    }
+
+        .showcase>h4{
+        padding: 0px 25%;
+        text-align: center;
+        font-weight: lighter;
+        font-size: 16px;
+        line-height: 20px;
+
+    }
+
+    p.price{
+        font-size: 25px;
+    }
 
 
 @media only screen and (max-width:767px) {
@@ -224,7 +314,7 @@ div.intro>a>button{
 nav.navbar{
     position: fixed;
     width: 100%;
-    bottom: 0px;
+    top: 0px;
     z-index: 1;
 }
 
@@ -253,19 +343,28 @@ nav.navbar{
     padding: 0px;
     display: flex;
     justify-content: center;
+    width: 100%;
 }
 
 header.prologue{
     flex-direction: column-reverse;
 }
 
+section.prologue{
+    flex-direction: column;
+}
+
 .dotlottie{
     width: 100%;
 }
 
-header>div{
+header>div, section.prologue>div{
     width: 100%;
     text-align: center;
+}
+
+div.intro, section.prologue{
+    line-height: 30px;
 }
 
 div.intro>p{
@@ -287,9 +386,19 @@ footer.footer{
 }
 
 h4.developer{
-    margin-bottom: 80px;
+    margin-bottom: 10px;
     font-size: 16px;
     text-align: center;
+}
+
+
+.showcase>h4{
+    padding: 0px 10%;
+    text-align: center;
+    font-weight: lighter;
+    font-size: 16px;
+    line-height: 20px;
+    
 }
 
     
